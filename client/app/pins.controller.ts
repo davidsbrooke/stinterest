@@ -1,10 +1,10 @@
 namespace app {
 
-  export class PinsController{
+  export class PinController{
 
     constructor() {
 
     }
   }
-  angular.module('app').controller('PinsController', PinsController);
+  angular.module('app').controller('PinController', PinController);
 }
