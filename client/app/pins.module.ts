@@ -3,9 +3,9 @@ namespace app{
     $stateProvider: ng.ui.IStateProvider
   ) => {
     $stateProvider.state('main page', {
-      url: '/main',
+      url: '/',
       templateUrl: '/client/pins/pins.html',
-      controller: 'PinController as vm'
+      controller: 'PinsController as vm'
     });
   });
 
