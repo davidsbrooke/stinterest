@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/stinterest';
 
-require('./api/stinterest/stinterest.model');
+require('./api/pins/pins.model');
 require('./api/users/user.model');
 mongoose.connect(MONGO_URL, (err) => {
     if (err) console.error(err);
@@ -23,7 +23,7 @@ app.get('/', (req, res, next) => {
     res.sendFile(config.client + '/index.html');
 });
 
-app.use('/api/v1/stinterest', require('./api/stinterest/stinterest.routes'));
+app.use('/api/v1/pins', require('./api/pins/pins.routes'));
 app.use('/api/v1/users', require('./api/users/user.routes'));
 
 // if path starts with /client, /bower_components, or /api, send a 404
