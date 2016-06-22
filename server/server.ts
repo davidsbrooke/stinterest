@@ -51,15 +51,4 @@ app.use((err: any, req, res, next) => {
 // Listen
 app.listen(PORT, () => {
     console.log(`Server is listening on localhost:${PORT}`);
-
-//Routes config
-app.use(require('body-parser')());
-app.use('client', express.static('client'));
-app.use('/scripts', express.static('bower_components'));
-
-app.get('/', (req, res, next) => {
-  res.sendFile(config.client + '/shared/index.html');
-})
-app.listen(3000, () => {
-  console.log(`Server is listening at localhost: ${3000}`);
 });
