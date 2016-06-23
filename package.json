@@ -1,13 +1,13 @@
 {
   "name": "stinterest",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.7",
     "angular-resource": "^1.5.7",
     "body-parser": "^1.15.2",
     "bower": "^1.7.9",
+    "express": "^4.14.0",
     "express-jwt": "^3.4.0",
     "jsonwebtoken": "^7.0.1",
     "mongoose": "^4.5.1",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node_modules/.bin/tsc && node ./server/server.js",
+    "start": "tsc && node ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/davidsbrooke/stinterest/issues"
   },
-  "homepage": "https://github.com/davidsbrooke/stinterest#readme"
+  "homepage": "https://github.com/davidsbrooke/stinterest#readme",
+  "description": ""
 }

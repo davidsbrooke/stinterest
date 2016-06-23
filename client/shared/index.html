@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <title>Stinterest</title>
     <base href="/" />
+    <link rel="stylesheet" href="http://bootswatch.com/united/bootstrap.min.css">
 </head>
 
 <body>
+    <navbar></navbar>
     <h1>index page</h1>
-    <ui-view></ui-view>
+    <div ui-view="" id="content"></div>
 
     <!-- angular -->
 
@@ -20,6 +22,11 @@
     <!-- module -->
     <script src="/client/app/app.js"></script>
     <script src="/client/app/pins.module.js"></script>
+
+    <!-- navbar -->
+    <script src="/client/components/navbar.directive.js"></script>
+    <script src="/client/components/navbar.controller.js"></script>
+
 
 
     <!-- services -->
