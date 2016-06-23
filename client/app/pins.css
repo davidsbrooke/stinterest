@@ -1,95 +1,27 @@
 img {
-  max-width: 100%;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 #pincontainer {
-  margin: auto;
   width 100%
+  text-align: center;
 }
 
-#first {
+.pin {
+  margin: auto;
   float: left;
   border: 5px solid white;
   border-radius: 5px;
   width: 400px;
   height: 400px;
   margin-top: 10%;
-  margin-left: 6%;
-}
-#second {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 10%;
-  margin-left: 5%;
-}
-#third {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 10%;
-  margin-left: 5%;
-}
-#fourth {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 6%;
-}
-#fifth {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 5%;
-}
-#sixth {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 5%;
-}
-#seventh {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 6%;
-}
-#eighth {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 5%;
-}
-#ninth {
-  float: left;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: 400px;
-  height: 400px;
-  margin-top: 6%;
-  margin-left: 5%;
+  margin-left: 5.5%;
 }
 
 .pin:hover {
-background-color: green;
+border-color: red;
 
 }
