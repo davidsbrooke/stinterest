@@ -1,0 +1,27 @@
+img {
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#pincontainer {
+  width 100%
+  text-align: center;
+}
+
+.pin {
+  margin: auto;
+  float: left;
+  border: 5px solid white;
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+  margin-top: 10%;
+  margin-left: 5.5%;
+}
+
+.pin:hover {
+border-color: red;
+
+}

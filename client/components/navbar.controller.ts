@@ -3,13 +3,13 @@ namespace app {
     public status;
 
     public logout() {
-      this.UserService.logout();
+    
     }
 
     constructor(
-      private UserService: app.UserService
+
     ) {
-      this.status = UserService.status;
+
     }
   }
 

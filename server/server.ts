@@ -1,9 +1,11 @@
+require('dotenv').config({ silent: true });
 import * as express from 'express';
-import * as mongoose from 'mongoose'
+import * as mongoose from 'mongoose';
 import config = require('./config/config')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const passport = require ('passport');
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/stinterest';
 
 require('./api/pins/pin.model');
@@ -17,12 +19,19 @@ mongoose.connect(MONGO_URL, (err) => {
 app.use(require('body-parser')());
 app.use('/client', express.static('client'));
 app.use('/scripts', express.static('bower_components'));
+app.use(passport.initialize());
 
 // Routes
 app.get('/', (req, res, next) => {
     res.sendFile(config.client + '/shared/index.html');
 });
+passport.serializeUser(function(user, cb) {
+  cb(null, user);
+});
 
+passport.deserializeUser(function(obj, cb) {
+  cb(null, obj);
+});
 app.use('/api/v1/pins', require('./api/pins/pins.routes'));
 app.use('/api/v1/users', require('./api/users/user.routes'));
 
