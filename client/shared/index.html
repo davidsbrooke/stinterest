@@ -8,7 +8,6 @@
 </head>
 <body>
     <navbar></navbar>
-    <h1>index page</h1>
     <div ui-view="" id="content"></div>
     <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css" />
     <link rel="stylesheet" href="/client/shared/site.css" />
@@ -26,6 +25,7 @@
     <!-- module -->
     <script src="/client/app/app.js"></script>
     <script src="/client/app/pins.module.js"></script>
+    <script src="/client/app/users/user.module.js"></script>
 
     <!-- navbar -->
     <script src="/client/components/navbar.directive.js"></script>
@@ -35,9 +35,12 @@
 
     <!-- services -->
     <script src="/client/app/pins.service.js"></script>
+    <script src="/client/app/users/user.service.js"></script>
+
 
     <!-- controller -->
     <script src="/client/app/pins.controller.js"></script>
+    <script src="/client/app/users/login/login.controller.js"></script>
 </body>
 
 </html>

@@ -5,8 +5,8 @@ let passport = require('passport');
 var PinterestStrategy = require('passport-pinterest-oauth').OAuth2Strategy;
 
 passport.use(new PinterestStrategy({
-    clientID: PINTEREST_CLIENT_ID,
-    clientSecret: PINTEREST_CLIENT_SECRET,
+    clientID: process.env.PINTEREST_CLIENT_ID,
+    clientSecret: process.env.PINTEREST_CLIENT_SECRET,
     callbackURL: "http://127.0.0.1:3000/auth/pinterest/callback"
   },
   function(accessToken, refreshToken, profile, done) {
