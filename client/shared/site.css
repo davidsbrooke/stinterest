@@ -1,0 +1,7 @@
+html {
+  background: url(https://images3.alphacoders.com/102/102987.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
