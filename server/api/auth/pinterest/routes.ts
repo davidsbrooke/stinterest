@@ -4,8 +4,8 @@ import * as controller from './controller';
 let passport = require('passport');
 const router = express.Router();
 
-router.get("/auth", passport.authenticate('google', {scope: ['profile'],
+router.get("/auth", passport.authenticate('pinterest', {scope: ['profile'],
 session: false}));
-router.get('/callback', passport.authenticate('google'), controller.callback)
+router.get('/callback', passport.authenticate('pinterest'), controller.callback)
 
 export = router;

@@ -3,22 +3,16 @@ import {User, IUserModel} from '../../users/user.model'
 
 let passport = require('passport');
 var PinterestStrategy = require('passport-pinterest-oauth').OAuth2Strategy;
-
+// as an alternative to line 5 try writing .Strategy instead of OAuth strategy
 passport.use(new PinterestStrategy({
     clientID: process.env.PINTEREST_CLIENT_ID,
     clientSecret: process.env.PINTEREST_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:3000/auth/pinterest/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    User.
-		findOne({ pinterestId: profile.id }, function (err, user) {
-      return done(err, user);
-    });
-  }
+    callbackURL: "http://localhost:3000/api/v1/auth/pinterest/callback",
+		passReqToCallback: true
+  }, auth
 ));
-
 export function auth(req, accessToken, refreshToken, profile, cb) {
-	User.findOne({ googleId: profile.id }).exec((err, user) => {
+	User.findOne({ pinterestId: profile.id }).exec((err, user) => {
 		if(err) return cb(err);
 		if(user) {
 			req['tempUser'] = user;
