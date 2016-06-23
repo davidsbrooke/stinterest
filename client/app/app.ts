@@ -9,6 +9,6 @@ namespace app {
   ) => {
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
-    $httpProvider.interceptors.push('authInterceptor');
+    // $httpProvider.interceptors.push('authInterceptor');
   });
 }
